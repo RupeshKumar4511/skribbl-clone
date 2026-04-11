@@ -1,9 +1,10 @@
-import { useEffect, useMemo } from "react"
-import { io } from "socket.io-client";
-import Home from './components/Home.jsx'
+import { useEffect, } from "react"
+import { useSocket } from "./socket/socket.js";
+import './App.css'
+import { Outlet } from "react-router-dom";
 function App() {
 
-  const socket = useMemo(() => io("http://localhost:3000"), [])
+  const socket = useSocket()
 
   useEffect(() => {
     socket.on('connect', () => {
@@ -16,8 +17,8 @@ function App() {
   }, [])
 
   return (
-    <div className="min-w-full min-h-full">
-      <Home />
+    <div className="bgImage min-w-full min-h-screen">
+      <Outlet />
     </div>
   )
 }

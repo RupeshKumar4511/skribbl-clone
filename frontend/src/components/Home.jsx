@@ -1,20 +1,15 @@
 import FacesCanvas from './FaceCanvas'
-import style from './Home.component.module.css'
-import image from '../assets/logo.gif'
 import LobbyMenu from './LobbyMenu'
+import Logo from './Logo'
 
 const Home = () => {
   return (
     // min-h-screen ensures it takes full height; flex-col stacks elements vertically
-    <div className={`${style['background']} min-h-screen w-full flex flex-col items-center p-4`}>
+    <div className='min-h-screen w-full flex flex-col items-center p-4'>
       
       {/* Logo/Image Container - Scales with screen width */}
       <div className='w-full max-w-[300px] md:max-w-[450px] flex justify-center mb-4 mt-4'>
-        <img 
-          src={image} 
-          alt="skribbl-image" 
-          className="w-full h-auto object-contain"
-        />
+        <Logo/>
       </div>
 
       {/* Canvas/Face Area */}
