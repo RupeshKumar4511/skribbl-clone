@@ -1,6 +1,12 @@
-import { useMemo } from "react";
-import { io } from "socket.io-client";
+import { useContext } from "react";
+import { SocketContext } from "./SocketProvider";
 
+
+// Custom hook for easy access
 export const useSocket = () => {
-  return useMemo(() => io("http://localhost:3000"), []);
+  const socket = useContext(SocketContext);
+  if (!socket) {
+    throw new Error("useSocket must be used within a SocketProvider");
+  }
+  return socket;
 };

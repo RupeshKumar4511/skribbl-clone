@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useSocket } from "../socket/socket";
+import { useSocket } from "../socket/socket.js";
 import { useNavigate } from "react-router-dom";
 
 const LobbyMenu = () => {
@@ -69,6 +69,7 @@ const LobbyMenu = () => {
 
   useEffect(() => {
     socket.on("room_created", ({ roomId }) => {
+      setRoomId(roomId)
       navigate(`/game/${roomId}`);
     });
 
@@ -81,10 +82,10 @@ const LobbyMenu = () => {
     socket.emit("create_room", { hostName: name || "User"});
   };
 
-  const joinRoom = () => {
-    socket.emit("join_room", { roomId, playerName: name  || "User"});
-    navigate(`/game/${roomId}`);
-  };
+  // const joinRoom = () => {
+  //   socket.emit("join_room", { roomId, playerName: name  || "User"});
+  //   navigate(`/game/${roomId}`);
+  // };
 
   return (
     <div className="bg-[#1a469d] flex items-center justify-center p-4 font-sans"
@@ -133,9 +134,9 @@ const LobbyMenu = () => {
 
         {/* Buttons */}
         <div className="space-y-4">
-          <button className="w-full bg-[#55da33] hover:bg-[#4bc12d] text-white text-4xl font-bold py-3 rounded-lg border-b-[6px] border-[#3e9d25] transition-all active:border-b-0 active:translate-y-[4px]" onClick={joinRoom}>
+          {/* <button className="w-full bg-[#55da33] hover:bg-[#4bc12d] text-white text-4xl font-bold py-3 rounded-lg border-b-[6px] border-[#3e9d25] transition-all active:border-b-0 active:translate-y-[4px]" onClick={joinRoom}>
             Play!
-          </button>
+          </button> */}
 
           <button className="w-full bg-[#2b8ee4] hover:bg-[#257cc7] text-white text-xl font-bold py-3 rounded-lg border-b-[4px] border-[#1a5ea3] transition-all active:border-b-0 active:translate-y-[2px]" onClick={createRoom}>
             Create Private Room

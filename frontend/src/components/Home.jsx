@@ -8,7 +8,7 @@ const Home = () => {
     <div className='min-h-screen w-full flex flex-col items-center p-4'>
       
       {/* Logo/Image Container - Scales with screen width */}
-      <div className='w-full max-w-[300px] md:max-w-[450px] flex justify-center mb-4 mt-4'>
+      <div className='w-full max-w-75 md:max-w-112.5 flex justify-center mb-4 mt-4'>
         <Logo/>
       </div>
 
