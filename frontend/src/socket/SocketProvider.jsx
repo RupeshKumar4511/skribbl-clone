@@ -1,6 +1,6 @@
 import {  useMemo } from "react";
 import { io } from "socket.io-client";
-import { SocketContext } from "./SocketContext.js"; 
+import { SocketContext } from "./SocketContext"; 
 
 export const SocketProvider = ({ children }) => {
   // Memoize the socket so it's only created once
