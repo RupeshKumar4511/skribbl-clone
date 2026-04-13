@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useSocket } from "../socket/socket.js";
+import { useSocket } from "../socket/useSocket.js";
 import { useNavigate } from "react-router-dom";
 
 const LobbyMenu = () => {

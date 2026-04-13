@@ -3,7 +3,7 @@ import Canvas from "../components/Canvas";
 import Chat from "../components/Chat";
 import PlayerList from "../components/PlayerList";
 import Logo from "../components/Logo";
-import { useSocket } from "../socket/socket.js";
+import { useSocket } from "../socket/useSocket.js";
 import { useEffect } from "react";
 
 export default function Game() {

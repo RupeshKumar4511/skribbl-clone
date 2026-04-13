@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SocketContext } from "./SocketContext.js";
+import { SocketContext } from "./SocketContext";
 
 
 // Custom hook for easy access

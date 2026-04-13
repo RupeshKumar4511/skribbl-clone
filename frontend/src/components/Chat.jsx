@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useSocket } from "../socket/socket.js";
+import { useSocket } from "../socket/useSocket.js";
 
 export default function Chat({ roomId }) {
   const [msg, setMsg] = useState("");

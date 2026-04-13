@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { useSocket } from "../socket/socket.js";
+import { useSocket } from "../socket/useSocket.js";
 
 export default function Canvas({ roomId }) {
   const canvasRef = useRef(null);
