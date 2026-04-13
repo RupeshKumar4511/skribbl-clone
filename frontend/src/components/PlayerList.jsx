@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSocket } from "../socket/socket.js";
+import { useSocket } from "../socket/useSocket.js";
 
 export default function PlayerList({ roomId }) {
   const socket = useSocket();
