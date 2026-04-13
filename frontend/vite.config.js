@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: ['skribbl-clone-4ch7.onrender.com'],
+  },
 })
