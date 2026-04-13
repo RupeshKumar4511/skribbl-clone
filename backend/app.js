@@ -10,14 +10,13 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
-        credentials: true
+        origin: 'https://skribbl-clone-4ch7.onrender.com',
+        
     }
 })
 
 app.use(cors({
-    origin: 'http://localhost:5173',
-    credentials: true
+    origin: 'https://skribbl-clone-4ch7.onrender.com',
 }));
 
 app.use(express.json());
